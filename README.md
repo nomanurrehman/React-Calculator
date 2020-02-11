@@ -1,3 +1,5 @@
+A simple calculator built to learn React concepts. The tutorial for the code is [here](https://blog.usejournal.com/everything-react-first-app-188b33a880ca)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
