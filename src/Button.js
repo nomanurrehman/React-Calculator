@@ -1,22 +1,17 @@
-import React, { Component } from 'react';
-import { Button as ReactstrapButton } from 'reactstrap';
+import React from 'react';
 
-class Button extends Component {
+const button = (props) => {
+    const classes = ['btn'];
 
-  constructor(props) {
-    super(props);
-    // This binding is necessary to make `this` work in the callback
-    this.doSomething = this.doSomething.bind(this);
-  }
+    if(typeof props !== undefined && typeof props.type !== undefined) {
+        classes.push('btn-' + props.type);
+    }
 
-  render() {
-    return <ReactstrapButton onClick={this.doSomething}>{ this.props.text }</ReactstrapButton>;
-  }
-
-  doSomething(e) {
-    e.preventDefault();
-    console.log(this.props.text);
-  }
+    return (  
+        <button className={ classes.join(' ') } onClick={props.onButtonPress}>
+            { props.children }
+        </button>
+    );
 }
 
-export default Button;
+export default button;
